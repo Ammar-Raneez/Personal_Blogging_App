@@ -1,0 +1,93 @@
+body {
+    color: white;
+    background-size: contain;
+}
+body::after {
+    content: "";    
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+body > * {
+    position: relative;
+    z-index: 2;
+}
+
+#individual-post-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3em;
+    padding: 24px 0 24px 0;
+    margin-bottom: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    word-spacing: 6px;
+    letter-spacing: 2px;
+}
+
+#individual-post-date {
+    padding: 16px 0 16px 16px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    color: #ccc;
+}
+
+#individual-post-content {
+    line-height: 1.4;
+    border: 1px solid #0f0;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 20px;
+    min-height: 120px;
+}
+
+footer {
+    margin-top: -20px;
+    display: flex;
+}
+
+.change-post {
+    margin-top: -30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.change-post button {
+    background-color:transparent;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+.change-post button:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.change-post #update {
+    border: 1px solid goldenrod;
+}
+.change-post #update:hover {
+    background-color: goldenrod;
+}
+
+.change-post #delete {
+    border: 1px solid red;
+}
+.change-post #delete:hover {
+    background-color: red;
+}
+
+@media screen and (max-width: 760px) {
+    .change-post {
+        justify-content: center;
+    }
+}
+
+.hide {
+    display: none !important;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Post</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/post.css">
+        <link rel="stylesheet" href="style/nav.css">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+        <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+        <script src="js/post.js" async defer></script>
+        <script src="js/login.js" async defer></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <nav id="topnav" class="topnav">
+                <nav class="profile-nav">
+                    <a href=""><img src="assets/logo.png"/></a>
+                </nav>
+    
+                <nav class="login-nav">
+                    <a href="indexBlog.html">Home</a>
+                    <a class="active" href="home.html">Posts</a>
+                    <a class="back-to-portfolio" href="index.html">To Portfolio</a>
+                </nav>
+            </nav>
+
+            
+            <div class="main">
+                <div class="main-container">
+                    <div class="navigation">
+                        <a href="home.html">Back</a>
+                    </div>
+
+                    <div class="post-container">
+                        <div id="individual-post-title"></div>
+                        <div id="individual-post-date"><em></em></div>
+                        <div id="individual-post-content"></div>
+                    </div>
+
+                    <div class="change-post">
+                        <button class="hide" type="button" onclick="getDeletedPost()" id="delete">Delete</button>
+                        <button class="hide" type="button" id="update">Edit</button>
+                    </div>
+                </div>
+            </div>
+            
+            <footer>
+                <p id="copyright">Copyright &copy; <span id="date"></span> Ammar Raneez ❤️ All Rights Reserved.</p>
+            </footer>
+        </div>
+    </body>
+</html>
