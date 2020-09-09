@@ -1,5 +1,5 @@
-const API_URL = "http://localhost:3000/api/models/posts";
-const API_BASE_URL = "http://localhost:3000/";
+const API_URL = "https://mysterious-escarpment-41897.herokuapp.com/api/models/posts";
+const API_BASE_URL = "https://mysterious-escarpment-41897.herokuapp.com/";
 
 window.onload = () => {
     getPosts();
