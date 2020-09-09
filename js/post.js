@@ -3,8 +3,8 @@
  * TODO: Complete getPost function to get post data from API
  * TODO: Complete buildPost function to fill in the post data in the post.html file using ids
  */
-const API_URL = "http://localhost:3000/api/models/posts/";
-const API_BASE_URL = "http://localhost:3000/";
+const API_URL = "https://mysterious-escarpment-41897.herokuapp.com/api/models/posts";
+const API_BASE_URL = "https://mysterious-escarpment-41897.herokuapp.com/";
 
 window.onload = () => {
     var date = new Date();

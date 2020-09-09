@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/api/models/posts/";
+const API_URL = "https://mysterious-escarpment-41897.herokuapp.com/api/models/posts";
 
 //must display immediately on page load
 window.onload = () => {
