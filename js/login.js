@@ -1,13 +1,13 @@
 const firebaseApp = {
-    apiKey: "AIzaSyCLTvYkOcSjCjihKsxqAGFkRZ1VjaB7x6M",
-    authDomain: "porfolio-ammar-raneez.firebaseapp.com",
-    databaseURL: "https://porfolio-ammar-raneez.firebaseio.com",
-    projectId: "porfolio-ammar-raneez",
-    storageBucket: "porfolio-ammar-raneez.appspot.com",
-    messagingSenderId: "612362088045",
-    appId: "1:612362088045:web:bafaf50fd6f6121bb69964",
-    measurementId: "G-JVFN9NJELD"
-}
+    apiKey: "AIzaSyAFNux9TUYh1jT1FxHFwg-7JInHkDYLOzo",
+    authDomain: "portfolio-blog-22f82.firebaseapp.com",
+    databaseURL: "https://portfolio-blog-22f82.firebaseio.com",
+    projectId: "portfolio-blog-22f82",
+    storageBucket: "portfolio-blog-22f82.appspot.com",
+    messagingSenderId: "68880747255",
+    appId: "1:68880747255:web:1356b23bc206b5e0d7e1f2",
+    measurementId: "G-06NLDZQTQW"
+};
 
 firebase.initializeApp(firebaseApp);
 const auth = firebase.auth()
