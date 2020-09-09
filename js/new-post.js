@@ -2,7 +2,7 @@
  * TODO: Finish submitNewPost function to submit form data to the API 
  */
 
-const API_URL = "https://mysterious-escarpment-41897.herokuapp.com/api/models/posts";
+const API_URL = "https://mysterious-escarpment-41897.herokuapp.com/api/models/posts/";
 
 const submitNewPost = () => {
     var date = new Date();
