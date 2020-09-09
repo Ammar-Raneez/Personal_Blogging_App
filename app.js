@@ -144,5 +144,5 @@ app.put("/api/models/posts/:post_id", upload.single("post-image"), (req, res) =>
 })
 
 app.use(express.static(path.join(__dirname, '/')));
-app.listen(process.env.PORT || 443); 
+app.listen(process.env.PORT || 3000); 
 //3000 due to the fact that, thats our local host, listen to this particular port upon starting a server
