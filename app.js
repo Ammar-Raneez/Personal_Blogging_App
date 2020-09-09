@@ -50,7 +50,7 @@ app.use(express.static('public'));
 
 
 app.get('/', (req, res, next) => {
-    console.log(__dirname)
+    res.sendFile(path.join(__dirname, "indexBlog.html"))
 })
 
 //these are routing method endpoints - routing refers to how an application responds to a clients request to a particular end point
