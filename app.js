@@ -46,8 +46,8 @@ app.use((req, res, next) => {
 app.use(express.json());                        //makes json into an object that we can use later to be usable by node
 app.use("/uploads", express.static('uploads')); //here we convert out uploads folder onto a static folder - to be able to view it on the net publicly
 //doing this also removes the necessity of accessing each image by get
-app.use("../app/js", express.static("../app/js"))
-app.use("../app/style", express.static("../app/style"))
+app.use(express.static('public'));
+
 
 app.get('/', (req, res, next) => {
     console.log(__dirname)
@@ -143,5 +143,6 @@ app.put("/api/models/posts/:post_id", upload.single("post-image"), (req, res) =>
     res.status(201).send(updatedPost);
 })
 
+app.use(express.static(path.join(__dirname, '/')));
 app.listen(process.env.PORT || 3000); 
 //3000 due to the fact that, thats our local host, listen to this particular port upon starting a server
