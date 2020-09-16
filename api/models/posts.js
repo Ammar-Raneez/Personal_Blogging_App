@@ -14,13 +14,14 @@ class Post {
 
     //read data from json
     readData() {
+        fetch(API_URL, {
+            method: 'GET'
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+        
         let file = fs.readFileSync(PATH);
         return JSON.parse(file);        	    //we parse it, converting it into actual JSON from raw data
-        // fetch(API_URL, {
-        //     method: 'GET'
-        // })
-        // .then(res => res.json())
-        // .then(data => data)
     }
 
     //get individual post, based on postid
