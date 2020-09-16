@@ -2,19 +2,25 @@ const fs = require('fs');                       //file system module, for writin
 const path = require('path');                   //path module 
 const PATH = path.join(__dirname, "../", "../", "/data.json"); //path to the data json file
 
-// const API_URL = "https://mysterious-escarpment-41897.herokuapp.com/api/models/posts/";
+const API_URL = "https://mysterious-escarpment-41897.herokuapp.com/api/models/posts/";
 
 class Post {
     //get posts
     get() {
-        console.log(this.readData())
-        return this.readData();
+        // console.log(this.readData())
+        // return this.readData();
+        return this.readData()
     }
 
     //read data from json
     readData() {
-        let file = fs.readFileSync(PATH);
-        return JSON.parse(file);        	    //we parse it, converting it into actual JSON from raw data
+        // let file = fs.readFileSync(PATH);
+        // return JSON.parse(file);        	    //we parse it, converting it into actual JSON from raw data
+        fetch(API_URL, {
+            method: 'GET'
+        })
+        .then(res => res.json())
+        .then(data => data)
     }
 
     //get individual post, based on postid
