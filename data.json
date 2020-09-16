@@ -1,1 +1,34 @@
-[{"id":"1596459389838","title":"React's Virtual DOM","author":"Ammar ♥","content":"Somethings wrong","post_image":"uploads/post-image-1596459389715.jpeg","added_date":"1596459389838"},{"id":"1596459271156","title":"React...","author":"Ammar ♥","content":"ReactJS... is simply amazing!\nOne, it's super fast and you can get work done really efficiently and quickly. Manipulations of DOM using plain vanilla JavaScript can be really cumbersome, with the many \"document.get bla bla bla\", however, react completely gets rid of that headache.\nMeet JSX! A combination of both JavaScript and HTML! This makes it so much easier to manipulate the DOM, mainly due to the fact that you can organize your JSX code into multiple \"components\", basically different files, and all you have to do is simply call those components, wherever you want that snippet to exist, to render them, and yes of course, you can call them as many times as you want! Removing the need of copy pasting as well.\n\nNow you may be wondering, \"so what exactly makes React faster than plain Vanilla JS? it obviously can't be due to what I read just now?\" Well, i'm glad you asked!\n\nReact utilizes something called the \"Virtual DOM\" which is quite different to the regular DOM JS uses. How is it different? You can find out on the next post 😝","post_image":"uploads/post-image-1596432609880.png","added_date":"1596459271156"},{"id":"1596459287638","title":"I LOVE JavaScript","author":"Ammar ♥","content":"I have been using JavaScript since the beginning of my coding career!\nI used it to build simple websites and I used it to build large scale applications!  \nNow I use it to teach others, as well as create large applications. The possibilities of this language are endless, and the use cases keep increasing every single day! ","post_image":"uploads/post-image-1581376324096.png","added_date":"1596459287638"},{"id":"1596459295271","title":"Why learning coding is important?","author":"Ammar ♥","content":"Nowadays with everything being electronic, everything needs to be programmed! \n\nFrom computers, to cars, machines, or anything else it most likely requires programming!\n\nSo as a result, demand for coders keeps increasing year by year, due to all these technological advances!","post_image":"uploads/post-image-1581375207393.jpg","added_date":"1596459295271"}]
+[
+    {
+        "id": "1596459389838",
+        "title": "React's Virtual DOM",
+        "author": "Ammar ♥",
+        "content": "React Utilizes something called the Virtual DOM. In reality, this doesn't seem to be much of a change compared to the original DOM used by plain Vanilla JavaScript.\nSo, you might be wondering, after reading the previous blog post, that, \"this guy just told me that the Virtual DOM is the reason why react is so much faster, and now he is saying it ain't much of a difference? the guy's delusional, he's contradicting himself😂\"\nWell, hold that thought, I did mention that it \"doesn't seem\", so shush, patience, wait till I explain.\nThe Virtual DOM is very similar to the DOM. Think of it like a tree with many leaves, when you pluck a leaf off, or a leaf turns brown/red, does it affect the entire tree and all it's leaves? \nWell of course not! That's exactly how the virtual DOM is, where the tree can be thought to the be the entire DOM itself, while each leaf, a node/element.\n\nWhat this means is that, whenever you change something, only what's needed gets re-rendered, leaving the rest of the tree unchanged, instead of reloading the entire DOM content.\n\nThis brings about a huge difference, because, in plain Vanilla JavaScript, whenever something changes, the entire DOM is reloaded leading to slow speeds, while here in React, only what must be reloaded is reloaded.\n\nThis makes React crazy fast, being able to update contents of the web-page dynamically, without waiting till your web-page gets reloaded.",
+        "post_image": "uploads/post-image-1596459389715.jpeg",
+        "added_date": "1596459389838"
+    },
+    {
+        "id": "1596459271156",
+        "title": "React...",
+        "author": "Ammar ♥",
+        "content": "ReactJS... is simply amazing!\nOne, it's super fast and you can get work done really efficiently and quickly. Manipulations of DOM using plain vanilla JavaScript can be really cumbersome, with the many \"document.get bla bla bla\", however, react completely gets rid of that headache.\nMeet JSX! A combination of both JavaScript and HTML! This makes it so much easier to manipulate the DOM, mainly due to the fact that you can organize your JSX code into multiple \"components\", basically different files, and all you have to do is simply call those components, wherever you want that snippet to exist, to render them, and yes of course, you can call them as many times as you want! Removing the need of copy pasting as well.\n\nNow you may be wondering, \"so what exactly makes React faster than plain Vanilla JS? it obviously can't be due to what I read just now?\" Well, i'm glad you asked!\n\nReact utilizes something called the \"Virtual DOM\" which is quite different to the regular DOM JS uses. How is it different? You can find out on the next post 😝",
+        "post_image": "uploads/post-image-1596432609880.png",
+        "added_date": "1596459271156"
+    },
+    {
+        "id": "1596459287638",
+        "title": "I LOVE JavaScript",
+        "author": "Ammar ♥",
+        "content": "I have been using JavaScript since the beginning of my coding career!\nI used it to build simple websites and I used it to build large scale applications!  \nNow I use it to teach others, as well as create large applications. The possibilities of this language are endless, and the use cases keep increasing every single day! ",
+        "post_image": "uploads/post-image-1581376324096.png",
+        "added_date": "1596459287638"
+    },
+    {
+        "id": "1596459295271",
+        "title": "Why learning coding is important?",
+        "author": "Ammar ♥",
+        "content": "Nowadays with everything being electronic, everything needs to be programmed! \n\nFrom computers, to cars, machines, or anything else it most likely requires programming!\n\nSo as a result, demand for coders keeps increasing year by year, due to all these technological advances!",
+        "post_image": "uploads/post-image-1581375207393.jpg",
+        "added_date": "1596459295271"
+    }
+]
