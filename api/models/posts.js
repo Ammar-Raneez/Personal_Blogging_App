@@ -19,7 +19,7 @@ class Post {
         // })
         // .then(res => res.json())
         // .then(data => console.log(data))
-        console.log(API_URL)
+        console.log(API_URL);
         let file = fs.readFileSync(PATH);
         return JSON.parse(file);        	    //we parse it, converting it into actual JSON from raw data
     }
