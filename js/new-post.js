@@ -5,8 +5,8 @@
 const API_URL = "https://mysterious-escarpment-41897.herokuapp.com/api/models/posts/";
 
 const submitNewPost = () => {
-    var date = new Date();
-    document.getElementById("date").innerText = date.getFullYear();
+    // var date = new Date();
+    // document.getElementById("date").innerText = date.getFullYear();
     
     // HINT: Use FormData to store data to send over
     // HINT: Redirect the user to home page after successful submission
