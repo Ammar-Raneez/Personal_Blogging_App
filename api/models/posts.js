@@ -20,7 +20,7 @@ class Post {
             method: 'GET'
         })
         .then(res => res.json())
-        .then(data => data)
+        // .then(data => data)
     }
 
     //get individual post, based on postid
