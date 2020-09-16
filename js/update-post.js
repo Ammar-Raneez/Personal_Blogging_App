@@ -32,24 +32,28 @@ const buildPost = data => {
 const submitNewPost = () => {
     const postId = getPostIdParam();
     
-    var date = new Date();
-    document.getElementById("date").innerText = date.getFullYear();
+    // var date = new Date();
+    // document.getElementById("date").innerText = date.getFullYear();
 
     const input = document.querySelector('input[type="file"]');
     const title = document.getElementById("form-post-title").value;
     const author = document.getElementById("form-post-author").value;
     const content = document.getElementById("form-post-content").value;
 
-    let data = new FormData();
-    data.append("post-image", input.files[0]);
-    data.append("title", title);
-    data.append("author", author);
-    data.append("content", content);
+    if(input && title && author && content) {
+        let data = new FormData();
+        data.append("post-image", input.files[0]);
+        data.append("title", title);
+        data.append("author", author);
+        data.append("content", content);
 
-    fetch(`${API_URL}${postId}`, {
-        method: "PUT",
-        body: data
-    }).then(() => {
-        window.location.href = "home.html"
-    })
+        fetch(`${API_URL}${postId}`, {
+            method: "PUT",
+            body: data
+        }).then(() => {
+            window.location.href = "home.html"
+        })
+    } else {
+        alert("Please fill In all the Fields")
+    }
 }
