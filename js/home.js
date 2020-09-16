@@ -16,24 +16,26 @@ const buildPosts = (blogPosts) => {
     let blogPostContent = ``;
 
     for(blogPost of blogPosts) {
-        const postDate = new Date(parseInt(blogPost.added_date)).toDateString();
-        const postAuthor = blogPost.author;
-        const postImage = `${API_BASE_URL}${blogPost.post_image}`;
-        const linkToPost = `post.html?id=${blogPost.id}`    //the pattern of the url
+        if(blogPost != null) {
+            const postDate = new Date(parseInt(blogPost.added_date)).toDateString();
+            const postAuthor = blogPost.author;
+            const postImage = `${API_BASE_URL}${blogPost.post_image}`;
+            const linkToPost = `post.html?id=${blogPost.id}`    //the pattern of the url
 
-        blogPostContent += `
-            <a class='linkToPost' href='${linkToPost}'>
-                <div class="post" style="background-image: url(${postImage})">
-                    <div class="post-image" style="background-image: url(${postImage})"></div>
+            blogPostContent += `
+                <a class='linkToPost' href='${linkToPost}'>
+                    <div class="post" style="background-image: url(${postImage})">
+                        <div class="post-image" style="background-image: url(${postImage})"></div>
 
-                    <div class="post-content">
-                        <div class="post-date">${postDate}, ${postAuthor}</div>
-                        <div class="post-title">${blogPost.title}</div>
-                        <div class="post-text">${blogPost.content}</div>
+                        <div class="post-content">
+                            <div class="post-date">${postDate}, ${postAuthor}</div>
+                            <div class="post-title">${blogPost.title}</div>
+                            <div class="post-text">${blogPost.content}</div>
+                        </div>
                     </div>
-                </div>
-            </a>
-        `
+                </a>
+            `
+        }
     }
     document.getElementById("blog-posts").innerHTML = blogPostContent;
     
