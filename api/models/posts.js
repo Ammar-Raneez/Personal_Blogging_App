@@ -2,9 +2,12 @@ const fs = require('fs');                       //file system module, for writin
 const path = require('path');                   //path module 
 const PATH = path.join(__dirname, "../", "../", "/data.json"); //path to the data json file
 
+const API_URL = "https://mysterious-escarpment-41897.herokuapp.com/api/models/posts/";
+
 class Post {
     //get posts
     get() {
+        console.log(this.readData())
         return this.readData();
     }
 
