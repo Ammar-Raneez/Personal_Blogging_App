@@ -1,12 +1,11 @@
-const firebaseApp = {
-    apiKey: "AIzaSyAFNux9TUYh1jT1FxHFwg-7JInHkDYLOzo",
-    authDomain: "portfolio-blog-22f82.firebaseapp.com",
-    databaseURL: "https://portfolio-blog-22f82.firebaseio.com",
-    projectId: "portfolio-blog-22f82",
-    storageBucket: "portfolio-blog-22f82.appspot.com",
-    messagingSenderId: "68880747255",
-    appId: "1:68880747255:web:1356b23bc206b5e0d7e1f2",
-    measurementId: "G-06NLDZQTQW"
+const firebaseConfig = {
+    apiKey: "AIzaSyBqTGpNqCeoPKJWf6BZstI_6cRD29knheU",
+    authDomain: "portfolio-blog-32c3d.firebaseapp.com",
+    projectId: "portfolio-blog-32c3d",
+    storageBucket: "portfolio-blog-32c3d.appspot.com",
+    messagingSenderId: "980455012470",
+    appId: "1:980455012470:web:ca77d17714302fa78a4757",
+    measurementId: "G-67TZPSME1E"
 };
 
 firebase.initializeApp(firebaseApp);
