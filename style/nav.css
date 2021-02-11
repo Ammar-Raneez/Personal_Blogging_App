@@ -1,4 +1,3 @@
-/**NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR*/
 .topnav {
     overflow: hidden;
     background: transparent;
@@ -31,7 +30,6 @@
 }
 
 .topnav .profile-nav img {
-    height: 100%;
     width: 3em;
 }
 
