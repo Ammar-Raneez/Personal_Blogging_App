@@ -14,13 +14,5 @@
         "content": "ReactJS... is simply amazing!\nOne, it's super fast and you can get work done really efficiently and quickly. Manipulations of DOM using plain vanilla JavaScript can be really cumbersome, with the many \"document.get bla bla bla\", however, react completely gets rid of that headache.\nMeet JSX! A combination of both JavaScript and HTML! This makes it so much easier to manipulate the DOM, mainly due to the fact that you can organize your JSX code into multiple \"components\", basically different files, and all you have to do is simply call those components, wherever you want that snippet to exist, to render them, and yes of course, you can call them as many times as you want! Removing the need of copy pasting as well.\n\nNow you may be wondering, \"so what exactly makes React faster than plain Vanilla JS? it obviously can't be due to what I read just now?\" Well, i'm glad you asked!\n\nReact utilizes something called the \"Virtual DOM\" which is quite different to the regular DOM JS uses. How is it different? You can find out on the next post 😝",
         "post_image": "uploads/post-image-1596432609880.png",
         "added_date": "1596459271156"
-    },
-    {
-        "id": "1596459295271",
-        "title": "Why learning coding is important?",
-        "author": "Ammar ♥",
-        "content": "Nowadays with everything being electronic, everything needs to be programmed! \n\nFrom computers, to cars, machines, or anything else it most likely requires programming!\n\nSo as a result, demand for coders keeps increasing year by year, due to all these technological advances!",
-        "post_image": "uploads/post-image-1581375207393.jpg",
-        "added_date": "1596459295271"
     }
 ]
