@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react"
+import { useSelector } from "react-redux"
 import styled from "styled-components"
+import { selectUser } from "../../features/userSlice"
 import instance, { baseURL } from "../../shared/api"
 import Footer from "../../shared/Footer"
 import Navbar from "../../shared/Navbar"
 import Blog from "./Blog"
-import Login from "./Login"
 
 const Home = () => {
     const [blogData, setBlogData] = useState<any>(null);
+    const user = useSelector(selectUser);
 
     useEffect(() => {
         instance.get('api/models/posts/')
@@ -17,12 +19,14 @@ const Home = () => {
     
     return (
         <Container>
-            <div className="add-post hide">
-                <a href="/">
-                    <div className="nav-button new-post-buton">+</div>
-                </a>
-            </div>
-            <Login />
+            {
+                user.email !== '' &&
+                    <div className="add-post">
+                        <a href="/">
+                            <div className="nav-button new-post-buton">+</div>
+                        </a>
+                    </div>
+            }
             <Navbar />
 
             <header>           
