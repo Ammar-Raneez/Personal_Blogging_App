@@ -47,7 +47,6 @@ const Navbar = () => {
                 </nav>
 
                 <nav>
-                    <a href="/">Posts</a>
                     {user.email === '' && <a onClick={toggleModal}>Login</a>}
                     {user.email !== '' && <a onClick={signOut}>Logout</a>}
                 </nav>
