@@ -19,4 +19,11 @@ const Footer = () => {
 export default Footer
 
 const Container = styled.footer `
+    min-height: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 14px;
 `

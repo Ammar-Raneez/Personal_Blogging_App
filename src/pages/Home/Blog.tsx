@@ -11,7 +11,7 @@ declare type BlogProps = {
 
 const Blog = ({ linkToPost, bgImage, postDate, postAuthor, title, content} : BlogProps) => {
     return (
-        <Container href={linkToPost}>
+        <AnchorContainer href={linkToPost}>
             <div style={{ backgroundImage:  'url(' + bgImage + ')' }}>
                 <div style={{ backgroundImage: 'url(' + bgImage + ')' }} />
                 <div>
@@ -20,13 +20,13 @@ const Blog = ({ linkToPost, bgImage, postDate, postAuthor, title, content} : Blo
                     <div>{content}</div>
                 </div>
             </div> 
-        </Container>
+        </AnchorContainer>
     )
 }
 
 export default Blog
 
-const Container = styled.a `
+const AnchorContainer = styled.a `
     @keyframes image {
         100% {
             background-position: 0%;

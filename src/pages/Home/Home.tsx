@@ -36,7 +36,7 @@ const Home = () => {
             </header>
 
             {blogData && 
-                <div>
+                <div className="blog-container">
                     <div>
                         {blogData.map((blog : any, index : number) => (
                             <Blog
@@ -61,6 +61,14 @@ export default Home
 
 const Container = styled.div `
     > header {
+        min-height: 16rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
         > div:first-child {
             width: 7rem;
             height: 7rem;
@@ -77,9 +85,48 @@ const Container = styled.div `
         > div:last-child {
             margin-top: 8px;
         }
+
+        > * {
+            z-index: 1;
+        }
+
+        ::after {
+            content: "";
+            position: absolute;
+            top: 0; bottom: 0; left: 0; right: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
     }
 
-    > div {
+    > div.add-post {
+        position: fixed;
+        background-color: #004186;
+        z-index: 1;
+        top: 90%;
+        left: 95%;
+        font-size: 2em;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+        transition: all 0.2s ease;
+
+        :hover {
+            background-color: #002349;
+            cursor: pointer;
+            transform: translate3d(0, -1px, 0);
+        }
+
+        > a {
+            color: white;
+            text-decoration: none;  
+        }
+    }
+
+    > div.blog-container {
         margin-top: 32px;
         display: flex;
         justify-content: center;
