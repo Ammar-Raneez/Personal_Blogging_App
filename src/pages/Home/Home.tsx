@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <Container>
             <div className="add-post hide">
-                <a href="#">
+                <a href="/">
                     <div className="nav-button new-post-buton">+</div>
                 </a>
             </div>
