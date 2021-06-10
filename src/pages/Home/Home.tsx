@@ -1,7 +1,20 @@
+import { useEffect, useState } from "react"
 import styled from "styled-components"
+import instance, { baseURL } from "../../shared/api"
+import Footer from "../../shared/Footer"
 import Navbar from "../../shared/Navbar"
+import Blog from "./Blog"
+import Login from "./Login"
 
 const Home = () => {
+    const [blogData, setBlogData] = useState<any>(null);
+
+    useEffect(() => {
+        instance.get('api/models/posts/')
+            .then(response => setBlogData(response.data))
+    }, [])
+
+    
     return (
         <Container>
             <div className="add-post hide">
@@ -9,22 +22,7 @@ const Home = () => {
                     <div className="nav-button new-post-buton">+</div>
                 </a>
             </div>
-
-            <div id="myModal" className="modal">
-                <div className="modal-content">
-                    <div className="modal-header">
-                        <span className="close">&times;</span>
-                        <h2>Login</h2>
-                    </div>
-                    <div className="modal-body">
-                        <h4>⭐Login to be able to Add/Delete/Update a Post⭐</h4>
-                        <input type="email" id="email" placeholder="email" />
-                        <input type="password" id="password" placeholder="password" />
-                        <button id="login">Login</button>
-                    </div>
-                </div>
-            </div>
-
+            <Login />
             <Navbar />
 
             <header>           
@@ -33,14 +31,24 @@ const Home = () => {
                 <div className="sub-text"><em>~We Were All Beginners At Some Point~</em></div>
             </header>
 
-            <div className="main">
-                <div className="main-container" id="blog-posts">
+            {blogData && 
+                <div className="main">
+                    <div className="main-container">
+                        {blogData.map((blog : any, index : number) => (
+                            <Blog
+                                key={index}
+                                linkToPost={'post.html?id=' + blog.id}
+                                bgImage={baseURL + blog.post_image}
+                                postDate={new Date(parseInt(blog.added_date)).toDateString()}
+                                postAuthor={blog.author}
+                                title={blog.title}
+                                content={blog.content}
+                            />
+                        ))}
+                    </div>
                 </div>
-            </div>
-
-            <footer>
-                <p id="copyright">Copyright &copy; <span id="date"></span> Ammar Raneez ❤️ All Rights Reserved.</p>
-            </footer>
+            }
+            <Footer />
         </Container>
     )
 }
