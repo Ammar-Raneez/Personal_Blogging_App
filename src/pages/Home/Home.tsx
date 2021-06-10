@@ -30,14 +30,14 @@ const Home = () => {
             <Navbar />
 
             <header>           
-                <div className="profile-image"></div>
-                <div className="profile-name">Ammar Raneez</div>
-                <div className="sub-text"><em>~We Were All Beginners At Some Point~</em></div>
+                <div></div>
+                <div>Ammar Raneez</div>
+                <div><em>~We Were All Beginners At Some Point~</em></div>
             </header>
 
             {blogData && 
-                <div className="main">
-                    <div className="main-container">
+                <div>
+                    <div>
                         {blogData.map((blog : any, index : number) => (
                             <Blog
                                 key={index}
@@ -60,4 +60,35 @@ const Home = () => {
 export default Home
 
 const Container = styled.div `
+    > header {
+        > div:first-child {
+            width: 7rem;
+            height: 7rem;
+            border-radius: 50%;
+            background-image: url(images/main.jpg);
+            background-size: cover;
+        }
+
+        > div:nth-child(2) {
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        > div:last-child {
+            margin-top: 8px;
+        }
+    }
+
+    > div {
+        margin-top: 32px;
+        display: flex;
+        justify-content: center;
+
+        > div {
+            max-width: 65%;
+            min-width: 65%;
+            width: 100%;
+            padding: 0 16px 0 16px;
+        }
+    }
 `

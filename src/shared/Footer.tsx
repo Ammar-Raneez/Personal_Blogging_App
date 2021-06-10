@@ -11,7 +11,7 @@ const Footer = () => {
 
     return (
         <Container>
-            <p id="copyright">Copyright &copy; <span>{date}</span> Ammar Raneez ❤️ All Rights Reserved.</p>
+            <p>Copyright &copy; <span>{date}</span> Ammar Raneez ❤️ All Rights Reserved.</p>
         </Container>
     )
 }
