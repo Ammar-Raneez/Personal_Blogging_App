@@ -21,9 +21,10 @@ const Home = () => {
         <Container>
             {
                 user.email !== '' &&
+                // use a class name here to distinguish between first div tags
                     <div className="add-post">
                         <a href="/">
-                            <div className="nav-button new-post-buton">+</div>
+                            <div>+</div>
                         </a>
                     </div>
             }
